@@ -454,4 +454,46 @@ group associated with the relation.
   one point.  This point yields a morphism from \(C\) to \(D\).
 \end{proof}
 
+This concludes the combinatorial construction of the Galois groupoid
+for any bounded equivalence relation present in a theory.  The
+construction is completely canonical in that it does not rely on any
+arbitrary choices, such as the choice of a sufficiently large model.
+As such, for example, there should be no hindrance to converting this
+construction into a functor between appropriate categories.
+Furthermore, the construction makes explicit the relationship between
+equivalence relations, the groupoids, and relevant Stone spaces, and
+should facilitate investigations into topological structure.
+
+Since the automorphism groups of objects in connected groupoid are all
+isomorphic, and since \(Gal_E(T)\) is nonempty, \(Gal_E(T)\)
+determines a unique isomorphism class of groups.  The only remaining
+business in this exposition is to show that this isomorphism class is
+the same as the one obtained in the traditional, non-canonical
+construction.
+
+\begin{theorem}
+  Let \(E\) be a bounded equivalence relation present in a complete
+  theory \(T\), and let \(\mathcal{U} \models T\) be sufficiently
+  large.  Let \(C\) be a maximal \(E\)-distinct parameter set.  Then
+  there is a surjective group homomorphism from \(Aut(\mathcal{U})\)
+  to \(Aut(C)\) whose kernel is exactly \(Fix(E)\), the automorphisms
+  fixing \(E\)-equivalence classes.
+\end{theorem}
+\begin{proof}
+  Since \(\mathcal{U}\) is sufficiently saturated, we may take an
+  elementary embedding of \(C\) into \(\mathcal{U}\), and thus view
+  \(C\) as a set of parameters in \(\mathcal{U}\).  For any \(f \in
+  Aut(\mathcal{U})\), by identifying \(C\) with \(C_1\) and \(f(C)\)
+  with \(C_2\), two disjoint copies of \(C\), we may view
+  \(\tp(C,f(C)) \in S(T \cup C_1 \cup C_2)\).  Define the bijection
+  arising from this type (in the sense of
+  Lemma~\ref{lemma-galoisbijection}) to be \(\Phi(f)\).
+
+  Since \(\Phi\) is really a proxy for viewing how elements of
+  \(Aut(\mathcal{U})\) permute equivalence classes, it is immediate
+  that \(\Phi\) is a group homomorphism and that \(\ker(\Phi) =
+  Fix(E)\).  \(\Phi\) is surjective because \(\mathcal{U}\) is
+  sufficiently homogeneous.
+\end{proof}
+
 \end{document}
