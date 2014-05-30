@@ -241,4 +241,49 @@ This definition aligns with the traditional definition of boundedness.
   E\).  Therefore \(E\) is not bounded.
 \end{proof}
 
+The definition of the Lascar equivalence relation, \(E_L\), of a
+theory proceeds as usual.
+
+\begin{definition}\label{definition-lascarequivalence}
+  Let \(T\) be a complete theory.  The \defterm{Lascar equivalence
+    relation}, \(E_L\), for that theory is the intersection (as sets
+  of types) of all bounded equivalence relations.
+\end{definition}
+
+\begin{remark}\label{remark-relationintersection}
+  It is clear that intersection of relations as sets of types
+  corresponds with the usual intersection of relations in any model.
+\end{remark}
+
+\begin{proposition}
+  For any theory, \(E_L\) is a bounded equivalence relation.
+\end{proposition}
+\begin{proof}
+  From Remark~\ref{remark-relationintersection}, since a relation
+  present in a theory is an equivalence relation iff it yields an
+  equivalence relation in a sufficiently saturated model, and since
+  the intersection of (usual) equivalence relations is an equivalence
+  relation, \(E_L\) is an equivalence relation.  It remains to show
+  that \(E_L\) is bounded.
+
+  Assume that \(E_L\) is not bounded.  Then there is some \(p \notin
+  E_L\) such that \(\sym(p)\) is graph-infinite.  Since \(E_L\) is the
+  intersection of bounded equivalence relations, \(p \notin E\) for
+  some bounded equivalence relation \(E\).  However, this contradicts
+  \(\sym(p)\) being graph-infinite.
+\end{proof}
+
+Finally, this is all just an alternate exposition of the usual
+definition.
+
+\begin{theorem}
+  The Lascar equivalence relation, as defined in
+  Definition~\ref{definition-lascarequivalence}, induces the usual
+  Lascar equivalence relation in any sufficiently large model
+  \(\mathcal{U}\).
+\end{theorem}
+\begin{proof}
+  This is a direct combination of the preceding results.
+\end{proof}
+
 \end{document}
