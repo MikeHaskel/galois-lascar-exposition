@@ -19,7 +19,7 @@
 \renewcommand{\emptyset}{\varnothing}
 \DeclareMathOperator{\tp}{tp}
 \DeclareMathOperator{\sym}{sym}
-\renewcommand{\elsubeq}{\preceq}
+\newcommand{\elsubeq}{\preceq}
 
 \title{Exposition of \(Gal_L(T)\)}
 \author{Mike Haskel}
@@ -358,5 +358,32 @@ to extend elementarily any such parameter set such into a maximal one.
   parameters occurs already somewhere in the chain.  Therefore Zorn's
   Lemma provides the desired result.
 \end{proof}
+
+\section{The Galois Groupoid}
+
+In this section, \(T\) will again be a complete theory and \(xEy\) a
+bounded equivalence relation present in \(T\).  There is a natural
+connected groupoid associated with this equivalence relation.  The
+hom-sets of this groupoid arise as projections of Stone spaces, and
+the automorphism group of any object is isomorphic to the usual Galois
+group associated with the relation.
+
+\begin{definition}
+  The \defterm{Galois groupoid} associated with \(E\), \(Gal_E(T)\),
+  has as objects the maximal \(E\)-distinct parameter sets, and has
+  hom-sets and compositions defined as follows.  For \(C, D\) objects,
+  let \(S(T \cup C \cup D)\) denote the space of completions of the
+  theories associated with \(C\) and \(D\) (with \(C\) and \(D\)
+  viewed as disjoint sets of parameters).  By
+  Lemma~\ref{lemma-galoisbijection}, under any theory in \(S(T \cup C
+  \cup D)\), \(E \cap (C \times D)\) is a bijection from \(C\) to
+  \(D\).  Define \(Hom(C,D)\) to be the bijections that arise in this
+  way.  By Lemma~\ref{lemma-galoiscomposition}, the composition of two
+  such bijections is in the relevant hom-set.  By
+  Lemma~\ref{lemma-galoisidentity} and
+  Lemma~\ref{lemma-galoisinverses}, respectively, \(Gal_E(T)\) has
+  identities and inverses, and so is a groupoid.  By
+  Lemma~\ref{lemma-galoisconnected}, \(Gal_E(T)\) is connected.
+\end{definition}
 
 \end{document}
