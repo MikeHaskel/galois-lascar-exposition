@@ -186,7 +186,7 @@ formalized below.
   variables \(\{x_i\}_{i \in \omega}\), is consistent.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}\label{proposition-graphinfinite}
   Let \(p(x,y) \in S_2(T)\).  Then the following are equivalent:
   \begin{itemize}
   \item \(\sym(p)\) is graph-infinite;
@@ -201,6 +201,44 @@ formalized below.
 \end{proposition}
 \begin{proof}
   This is an easy consequence of compactness.
+\end{proof}
+
+\begin{definition}
+  Let \(xEy\) be an equivalence relation present in \(T\).  \(E\) is
+  \defterm{bounded} if no \(p(x,y) \notin E\) is graph-infinite.
+\end{definition}
+
+This definition aligns with the traditional definition of boundedness.
+
+\begin{proposition}
+  Let \(xEy\) be an equivalence relation present in \(T\).  \(E\) is
+  bounded iff, in a sufficiently large model \(\mathcal{U}\), the
+  number of equivalence classes is strictly less than \(\kappa\),
+  where \(\kappa\) is the saturation of \(\mathcal{U}\).
+\end{proposition}
+\begin{proof}
+  (\(\Leftarrow\)) Assume that \(E\) is not bounded.  Then take
+  \(p(x,y) \notin E\) graph-infinite.  By
+  Proposition~\ref{proposition-graphinfinite}, there are \(\kappa\)
+  many elements of \(\mathcal{U}\) pairwise related by \(\sym(p)\).
+  Since \(p \notin E\), and since \(E\) is symmetric, \(\sym(p)\) is
+  disjoint from \(E\).  Therefore we have found \(\kappa\) many
+  pairwise inequivalent elements of \(\mathcal{U}\).
+
+  (\(\Rightarrow\)) Let \(\tau = |S_2(T)|\).  By Ramsey theory, there
+  is a least cardinal \(\lambda\) such that, for any coloring of the
+  complete 2-graph with \(\lambda\) vertices and \(\tau\) colors,
+  there is a complete, infinite, homogeneous subgraph.  Since
+  \(\mathcal{U}\) is sufficiently large, in particular \(\kappa \geq
+  \lambda\).
+
+  Assume that there are at least \(\kappa\) equivalence classes in
+  \(\mathcal{U}\).  Pick one representative from each of the \(\geq
+  \kappa\) classes.  Consider each pair of representatives \(\{a,b\}\)
+  ``colored'' by \(\sym(a,b) = \sym(b,a)\).  Since \(\kappa \geq
+  \lambda\), there is an complete, infinite, homogeneous subgraph.
+  That is, there is some graph-infinite \(\sym(p)\) with \(p \notin
+  E\).  Therefore \(E\) is not bounded.
 \end{proof}
 
 \end{document}
