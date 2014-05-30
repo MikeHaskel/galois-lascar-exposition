@@ -400,4 +400,25 @@ group associated with the relation.
   bijection.
 \end{proof}
 
+\begin{lemma}\label{lemma-galoiscomposition}
+  Let \(B,C,D\) be maximal \(E\)-distinct parameter sets, and let \(f
+  \in Hom(B,C)\), \(g \in Hom(C,D)\).  Then \(gf \in Hom(B,D)\).
+\end{lemma}
+\begin{proof}
+  Take \(p \in S(T \cup B \cup C)\), \(q \in S(T \cup C \cup D)\)
+  yielding \(f\) and \(g\), respectively.  Consider the theory \([p,
+    q] \subseteq S(T \cup B \cup C \cup D)\).  Note that both \(p\)
+  and \(q\) restrict to the same theory in the language with constant
+  symbols only from \(C\) (that is, the completion of \(T\) associated
+  with the parameter set \(C\)).  The theory \([p,q]\) is therefore
+  the extension of that theory the new sentences from \(p\) and \(q\),
+  each mentioning disjoint sets of new constants.  Since \(p\) and
+  \(q\) are individually consistent, \([p,q]\) is consistent.
+  Therefore there is some \(r \in S(B \cup C \cup D)\) extending both
+  \(p\) and \(q\).  In this theory, \(E \cap (B \times D)\) is the
+  composition of \(E \cap (C \times D)\) with \(E \cap (B \times C)\).
+  Therefore the composition \(gf\) arises from \(r \restriction_{B
+    \cup D}\), so \(gf \in Hom(B,D)\).
+\end{proof}
+
 \end{document}
