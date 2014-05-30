@@ -19,6 +19,7 @@
 \renewcommand{\emptyset}{\varnothing}
 \DeclareMathOperator{\tp}{tp}
 \DeclareMathOperator{\sym}{sym}
+\renewcommand{\elsubeq}{\preceq}
 
 \title{Exposition of \(Gal_L(T)\)}
 \author{Mike Haskel}
@@ -242,7 +243,7 @@ This definition aligns with the traditional definition of boundedness.
   E\).  Therefore \(E\) is not bounded.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}\label{corollary-uniformboundonclasses}
   Let \(xEy\) be a bounded equivalence relation.  Then there is a
   cardinal \(\lambda\) such that all models have strictly fewer than
   \(\lambda\) equivalence classes.
@@ -308,5 +309,54 @@ nevertheless have enough to talk about types of these parameters,
 will be interested in the case when these parameters are all from
 distinct equivalence classes.  The boundedness of \(E\) will allow us
 to extend elementarily any such parameter set such into a maximal one.
+
+\begin{definition}
+  A \defterm{parameter set} is a set \(C\) of fresh constant symbols,
+  and an associated extension of \(T\) to a complete theory in the
+  language with these new symbols added.
+\end{definition}
+
+\begin{remark}
+  If \(c\) is an \(n\)-tuple in some parameter set \(C\), the set of
+  formulas \(\phi(x)\) in the original language which hold of \(c\) in
+  the extended theory is a type in \(S_n(T)\).  Therefore any relation
+  present in \(T\) yields a relation on any parameter set.
+\end{remark}
+
+\begin{definition}
+  Let \(C, D\) be parameter sets.  Then \(C \elsubeq D\), that is,
+  \(D\) is an \defterm{elementary extension} of \(C\), if \(C
+  \subseteq D\) and the complete theory associated with \(D\) extends
+  the complete theory associated with \(C\).
+\end{definition}
+
+\begin{remark}\label{remark-elsubisordinary}
+  It is clear that elementary extension of parameter sets works very
+  much like elementary extension of models.  In particular, it defines
+  a partial order, and every chain has a least upper bound.
+\end{remark}
+
+\begin{definition}
+  A parameter set is \defterm{\(E\)-distinct} if every element of the
+  parameter set is in a distinct equivalence class.
+\end{definition}
+
+\begin{proposition}\label{proposition-maximalsexist}
+  Let \(C\) be an \(E\)-distinct parameter set.  Then \(C\) extends
+  elementarily into an (not necessarily canonical) \(E\)-distinct
+  parameter set \(D\) that is maximal such.
+\end{proposition}
+\begin{proof}
+  By Corollary~\ref{corollary-uniformboundonclasses}, we can assume
+  without loss of generality that all parameter sets that matter have
+  an underlying set that is a subset of some fixed cardinal
+  \(\lambda\).  In particular, under this assumption, there is a set
+  containing all parameter sets that matter.  We already have, from
+  Remark~\ref{remark-elsubisordinary}, that every chain has a least
+  upper bound.  The least upper bound of a chain of \(E\)-distinct
+  parameter sets must also be \(E\)-distinct, since any pair of
+  parameters occurs already somewhere in the chain.  Therefore Zorn's
+  Lemma provides the desired result.
+\end{proof}
 
 \end{document}
