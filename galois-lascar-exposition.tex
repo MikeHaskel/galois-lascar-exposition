@@ -13,11 +13,58 @@
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{Remark}
 
+\newcommand{\defterm}[1]{\emph{#1}}
+
+\renewcommand{\emptyset}{\varnothing}
+\DeclareMathOperator{\tp}{tp}
+
 \title{Exposition of \(Gal_L(T)\)}
 \author{Mike Haskel}
 \date{Summer 2014}
 
 \begin{document}
 \maketitle
+
+\section{Introduction}
+
+The purspose of this writeup is to construct \(Gal_L(T)\) without
+making any arbitrary choices, such as selecting a large saturated
+model.
+
+\section{Bounded, Automorphism-Invariant Equivalences}
+
+In this section, I will construct the Lascar equivalence relation in
+terms of types.
+
+\begin{definition}
+  Let \(T\) be a complete theory.  An \(n\)-ary \defterm{relation
+    present in \(T\)} is a subset of \(S_n(T/\emptyset)\).  For any
+  \(R\) a relation present in \(T\), \(a_1,\ldots,a_n\) in an
+  appropriate context, say that \(R(a_1,\ldots,a_n)\) holds just if
+  \(\tp(a_1,\ldots,a_n) \in R\).
+\end{definition}
+
+This definition corresponds to the usual definition of an
+automorphism-invariant relation.
+
+\begin{proposition}
+  Let \(\mathcal{U}\) be a sufficiently large model.  An \(n\)-ary
+  relation \(R\) on this model is automorphism-invariant iff it arises
+  as a relation present in \(T\).
+\end{proposition}
+\begin{proof}
+  Let \(R\) be a relation present in \(T\), \(f \in
+  Aut(\mathcal{U})\), and \(a\in \mathcal{U}^n\).  Since \(f\) is an
+  automorphism, \(\tp(a) = \tp(f(a))\).  Therefore \(R(a)\) iff
+  \(R(f(a))\), so \(R\) is automorphism-invariant.
+
+  Let \(R\) be an automorphism-invariant relation on
+  \(\mathcal{U}^n\), and let \(a,b \in \mathcal{U}^n\) have the same
+  type.  Since \(\mathcal{U}\) is sufficiently homogeneous, there is
+  an automorphism \(f\) with \(f(a) = b\).  Since \(R\) is
+  automorphism-invariant, \(R\) agrees on \(a\) and \(b\).  Therefore
+  whether \(R\) holds of a tuple depends only on the tuple's type, so
+  \(R\) arises as a type present in \(T\).
+\end{proof}
 
 \end{document}
