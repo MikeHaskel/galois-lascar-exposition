@@ -386,4 +386,18 @@ group associated with the relation.
   Lemma~\ref{lemma-galoisconnected}, \(Gal_E(T)\) is connected.
 \end{definition}
 
+\begin{lemma}\label{lemma-galoisbijection}
+  Let \(C, D\) be maximal \(E\)-distinct parameter sets, and fix a
+  complete theory in \(S(T \cup C \cup D)\).  Then, under this theory,
+  \(E \cap (C \times D)\) is a bijection from \(C\) to \(D\).
+\end{lemma}
+\begin{proof}
+  Let \(c \in C\).  It must be that \(cEd\) for at least one \(d \in
+  D\); otherwise, \(D\) would not be maximally \(E\)-distinct.
+  However, since no two \(d_1,d_2 \in D\) are equivalent, then \(cEd\)
+  for \emph{exactly} one \(d \in D\).  Since this situation is
+  symmetric in \(C\) and \(D\), \(E \cap (C \times D)\) is a
+  bijection.
+\end{proof}
+
 \end{document}
