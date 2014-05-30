@@ -6,6 +6,7 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{proposition}[theorem]{Proposition}
 \newtheorem{lemma}{Lemma}[theorem]
+\newtheorem{corollary}{Corollary}[theorem]
 
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{Definition}
@@ -210,7 +211,7 @@ formalized below.
 
 This definition aligns with the traditional definition of boundedness.
 
-\begin{proposition}
+\begin{proposition}\label{proposition-boundedasusual}
   Let \(xEy\) be an equivalence relation present in \(T\).  \(E\) is
   bounded iff, in a sufficiently large model \(\mathcal{U}\), the
   number of equivalence classes is strictly less than \(\kappa\),
@@ -239,6 +240,16 @@ This definition aligns with the traditional definition of boundedness.
   \lambda\), there is an complete, infinite, homogeneous subgraph.
   That is, there is some graph-infinite \(\sym(p)\) with \(p \notin
   E\).  Therefore \(E\) is not bounded.
+\end{proof}
+
+\begin{corollary}
+  Let \(xEy\) be a bounded equivalence relation.  Then there is a
+  cardinal \(\lambda\) such that all models have strictly fewer than
+  \(\lambda\) equivalence classes.
+\end{corollary}
+\begin{proof}
+  This is just the \(\lambda\) from the proof of
+  Proposition~\ref{proposition-boundedasusual}.
 \end{proof}
 
 The definition of the Lascar equivalence relation, \(E_L\), of a
