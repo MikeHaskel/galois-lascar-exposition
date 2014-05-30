@@ -97,4 +97,30 @@ relation present in \(T\) without referencing any models.
   \(\mathcal{U}\).
 \end{proof}
 
+\begin{definition}
+  Let \(R(x,y)\) be a binary relation present in \(T\).  \(R\) is
+  \defterm{symmetric} if, for all \(p(x,y) \in R\), \(p(y,x) \in R\).
+\end{definition}
+
+\begin{proposition}
+  Let \(R(x,y)\) be a binary relation present in \(T\).  \(R\) is
+  symmetric iff it yields a symmetric relation in all models, iff it
+  yields a symmetric relation in a sufficiently large model.
+\end{proposition}
+\begin{proof}
+  Let \(R(x,y)\) be a symmetric relation present in \(T\), \(M \models
+  T\), and \(a,b \in M\) with \(R(a,b)\).  Set \(p(x,y) = \tp(a,b)\).
+  Since \(\tp(b,a) = p(y,x) \in R\), \(R(b,a)\).  Therefore \(R\)
+  yields a symmetric relation in \(M\).
+
+  Let \(R(x,y)\) be a binary relation present in \(T\) which is not
+  symmetric.  Let \(\mathcal{U}\) be a sufficiently large model.
+  Since \(R\) is not symmetric, take \(p(x,y) \in R\) with \(p(y,x)
+  \notin R\).  Since \(\mathcal{U}\) is sufficiently saturated, take
+  \(a,b \in \mathcal{U}\) with \(\tp(a,b) = p(x,y)\), so \(R(a,b)\).
+  However, \(\tp(b,a) = p(y,x) \notin R\), so \(\neg R(b,a)\).
+  Therefore \(R\) does not yield a symmetric relation in
+  \(\mathcal{U}\).
+\end{proof}
+
 \end{document}
