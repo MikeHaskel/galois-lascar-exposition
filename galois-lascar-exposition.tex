@@ -17,6 +17,7 @@
 
 \renewcommand{\emptyset}{\varnothing}
 \DeclareMathOperator{\tp}{tp}
+\DeclareMathOperator{\sym}{sym}
 
 \title{Exposition of \(Gal_L(T)\)}
 \author{Mike Haskel}
@@ -157,6 +158,49 @@ relation present in \(T\) without referencing any models.
   However, since \(\tp(a,c) = r\restriction_{x,y}\), \(\tp(a,c) \notin
   R\) and \(\neg R(a,c)\).  Therefore \(R\) does not yield a
   transitive relation in \(\mathcal{U}\).
+\end{proof}
+
+For an equivalence relation present in \(T\), there is a purely
+combinatorial definition of boundedness.  We want to say that an
+equivalence relation is bounded if there aren't too many equivalence
+classes.  Since an equivalence relation present in \(T\) is just a set
+of types over the empty set, the ways in which elements can be in
+different equivalence classes correspond to those types \emph{not} in
+the relation.  By Ramsey theory, if there are too many inequivalent
+elements, there are infinitely many elements inequivalent by the same
+type.  By compactness, it is therefore possible to have arbitrarily
+many elements inequivalent by this type.  This characterization is
+formalized below.
+
+\begin{definition}
+  Let \(p(x,y) \in S_2(T)\).  Then \(\sym(p)\), the \defterm{symmetric
+    closure} of \(p\), is \(\{p(x,y), p(y,x)\}\).  Since \(\sym(p)
+  \subseteq S_2(T)\), \(\sym(p)\) is a (symmetric) relation present in
+  \(T\).  Additionally, since \(\sym(p)\) is a finite set of points,
+  it is closed, and therefore corresponds to a filter of formulas.
+\end{definition}
+
+\begin{definition}
+  Let \(p(x,y) \in S_2(T)\).  \(\sym(p)\) is \defterm{graph-infinite}
+  if \([\sym(p)(x_i,x_j), x_i \neq x_j : i \neq j]\), a filter in the
+  variables \(\{x_i\}_{i \in \omega}\), is consistent.
+\end{definition}
+
+\begin{proposition}
+  Let \(p(x,y) \in S_2(T)\).  Then the following are equivalent:
+  \begin{itemize}
+  \item \(\sym(p)\) is graph-infinite;
+  \item for some infinite \(\kappa\), there is a model with \(\kappa\)
+    many elements pairwise related by \(\sym(p)\);
+  \item for all infinite \(\kappa\), there is a model with \(\kappa\)
+    many elements pairwise related by \(\sym(p)\); and
+  \item for any \(\kappa\)-saturated model \(\mathcal{U}\), there are
+    at least \(\kappa\) many elements of \(\mathcal{U}\) pairwise
+    related by \(\sym(p)\).
+  \end{itemize}
+\end{proposition}
+\begin{proof}
+  This is an easy consequence of compactness.
 \end{proof}
 
 \end{document}
